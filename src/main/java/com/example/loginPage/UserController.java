@@ -12,11 +12,13 @@ public class UserController {
     UserService userService;
     @PostMapping("/add")
     public String createUser(@RequestBody() User user){
+
         return userService.createUser(user);
     }
 
     @GetMapping("/getUser")
     public User getUser(@RequestParam("id") Integer id){
+
         return userService.getUser(id);
     }
 
